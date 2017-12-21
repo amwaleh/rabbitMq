@@ -8,8 +8,6 @@ msg = sys.argv[1]
 print(msg)
 logging.basicConfig()
 
-# Parse CLODUAMQP_URL (fallback to localhost)
-
 connection = pika.BlockingConnection(
     pika.ConnectionParameters('127.0.0.1'))  # Connect to rabbitMq
 channel = connection.channel()  # start a channel
